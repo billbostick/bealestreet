@@ -1,7 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!--$Id: page.tpl.php,v 1.3 2007/09/11 16:45:35 roopletheme Exp $-->
-<!-- www.roopletheme.com -->
-<html xmlns="http://www.w3.org/1999/xhtml" lang="<?php print $language ?>" xml:lang="<?php print $language ?>">
+<?php
+// $Id: $
+?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="<?php print $language->language ?>" xml:lang="<?php print $language->language ?>">
 
 <head>
   <title><?php print $head_title ?></title>
@@ -293,7 +293,7 @@
         <h1 class="title"><?php print $title ?></h1>
         <div class="tabs"><?php print $tabs ?></div>
         <?php print $help ?>
-        <?php print $messages ?>
+        <?php if ($show_messages) { print $messages; } ?>
         <?php print $content; ?>
         <?php print $feed_icons; ?>
         <?php if ($content_bottom): ?><div id="content-bottom"><?php print $content_bottom; ?></div><?php endif; ?>
